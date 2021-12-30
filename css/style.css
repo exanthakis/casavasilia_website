@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Parisienne");
 /* @import url("https://fonts.googleapis.com/css?family=Poppins"); */
 @import url("https://fonts.googleapis.com/css?family=Poiret+One&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 /* Reset */
 * {
   box-sizing: border-box;
@@ -12,8 +12,9 @@
 
 /* Main Styling */
 body {
-    /* font-family: "Poppins", sans-serif; */
-  font-family: "Poiret One", cursive;
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Poiret One", cursive; */
   line-height: 1.4;
 }
 
@@ -28,14 +29,12 @@ p {
 
 /* ------------------------------------------- */
 
-
 .boton {
   width: 200px;
   height: 50px;
   /* margin: 200px auto; */
   display: block;
   position: relative;
-
 }
 
 .botontext {
@@ -45,7 +44,7 @@ p {
   z-index: 1;
   text-align: center;
   line-height: 50px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -57,7 +56,6 @@ p {
   position: relative;
   float: left;
   margin-left: -20px;
-  
 }
 /* fed5a9 */
 .twist:before {
@@ -67,16 +65,13 @@ p {
   background: #fff;
   bottom: 100%;
   position: absolute;
-  transform-origin: center bottom 0px; 
-  transform: matrix3d(1, 0, 0, 0, 
-                      0, 0, -1, -0.003, 
-                      0, 1, 0, 0, 
-                      0, 0, 0, 1);
-  
--webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
--moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
--o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+  transform-origin: center bottom 0px;
+  transform: matrix3d(1, 0, 0, 0, 0, 0, -1, -0.003, 0, 1, 0, 0, 0, 0, 0, 1);
+
+  -webkit-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  -moz-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  -o-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995); /* custom */
 }
 
 .twist:after {
@@ -87,31 +82,22 @@ p {
   height: 100%;
   background: #fff;
   transform-origin: center top 0px;
-  transform: matrix3d(1, 0, 0, 0, 
-                      0, 1, 0, 0, 
-                      0, 0, 1, -0.003, 
-                      0, -50, 0, 1);
-  
--webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
--moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
--o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.003, 0, -50, 0, 1);
+
+  -webkit-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  -moz-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  -o-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995); /* custom */
 }
 
 .boton:hover .twist:before {
   background: #aba26f;
-  transform: matrix3d(1, 0, 0, 0, 
-                      0, 1, 0, 0, 
-                      0, 0, 1, 0.003, 
-                      0, 50, 0, 1);
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0.003, 0, 50, 0, 1);
 }
 
 .boton:hover .twist:after {
   background: #aba26f;
-  transform: matrix3d(1, 0, 0, 0, 
-                      0, 0, -1, 0.003, 
-                      0, 1, 0, 0, 
-                      0, 0, 0, 1);
+  transform: matrix3d(1, 0, 0, 0, 0, 0, -1, 0.003, 0, 1, 0, 0, 0, 0, 0, 1);
 }
 
 .boton .twist:nth-of-type(1) {
@@ -141,53 +127,36 @@ p {
 .boton .botontext:nth-of-type(1) {
   color: #fff;
   bottom: 100%;
-  transform-origin: center bottom 0px; 
-  transform: matrix3d(1, 0, 0, 0, 
-                      0, 0, -1, -0.003, 
-                      0, 1, 0, 0, 
-                      0, 0, 0, 1);
-  
--webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
--moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
--o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+  transform-origin: center bottom 0px;
+  transform: matrix3d(1, 0, 0, 0, 0, 0, -1, -0.003, 0, 1, 0, 0, 0, 0, 0, 1);
+
+  -webkit-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  -moz-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  -o-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995); /* custom */
 }
 
 .boton:hover .botontext:nth-of-type(1) {
-  transform: matrix3d(1, 0, 0, 0, 
-                      0, 1, 0, 0, 
-                      0, 0, 1, 0.003, 
-                      0, 50, 0, 1);
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0.003, 0, 50, 0, 1);
 }
 
 .boton .botontext:nth-of-type(2) {
   color: #333;
   top: 100%;
   transform-origin: center top 0px;
-  transform: matrix3d(1, 0, 0, 0, 
-                      0, 1, 0, 0, 
-                      0, 0, 1, -0.003, 
-                      0, -50, 0, 1);
-  
--webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
--moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
--o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.003, 0, -50, 0, 1);
+
+  -webkit-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  -moz-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  -o-transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995);
+  transition: all 500ms cubic-bezier(0.97, 0, 0.395, 0.995); /* custom */
 }
 
 .boton:hover .botontext:nth-of-type(2) {
-  transform: matrix3d(1, 0, 0, 0, 
-                      0, 0, -1, 0.003, 
-                      0, 1, 0, 0, 
-                      0, 0, 0, 1);
+  transform: matrix3d(1, 0, 0, 0, 0, 0, -1, 0.003, 0, 1, 0, 0, 0, 0, 0, 1);
 }
 
-
-
 /* ------------ */
-
-
-
 
 .button {
   background: none;
@@ -329,7 +298,7 @@ p {
 /* --------------------------------------------------------------- */
 /* Utility Classes */
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   padding: 0 2rem;
   overflow: hidden;
@@ -472,10 +441,12 @@ p {
   margin-top: 0.6rem;
 }
 
-#gallery .wrapper .icon,#reviews .wrapper .icon {
+#gallery .wrapper .icon,
+#reviews .wrapper .icon {
   color: #fff;
 }
-#gallery .wrapper, #reviews .wrapper {
+#gallery .wrapper,
+#reviews .wrapper {
   margin-top: -5px;
 }
 /* -------------------------------- */
@@ -511,7 +482,7 @@ p {
 }
 
 .m-heading {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin-bottom: 0.75rem;
   line-height: 1.1;
 
@@ -878,7 +849,7 @@ p {
   background-color: #80000000;
   /* For other browsers */
   background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   height: 1.2rem;
 }
 #navbar ul {
@@ -961,10 +932,10 @@ p {
 }
 #navbar ul li:nth-child(5),
 #showcase ul li:nth-child(5) {
-  -moz-animation-delay: 3.0s;
-  -webkit-animation-delay: 3.0s;
-  -o-animation-delay: 3.0s;
-  animation-delay: 3.0s;
+  -moz-animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s;
 }
 
 /* #navbar ul li a {
@@ -992,9 +963,9 @@ p {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
-  background: url("../img/gallery/bedroom-balcony/4.jpg") no-repeat
-    center center/cover;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: url("../img/gallery/kitschen-living\ room-toilet/10.jpg")
+    no-repeat center center/cover;
+  background-color: rgba(0, 0, 0, 0.6);
   /* opacity: 0.9; */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
@@ -1234,9 +1205,9 @@ p {
 #about .items .item i {
   /* background: #93cb52; */
   padding: 1rem;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   margin-bottom: 1rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 #about .items .item div,
 i {
@@ -1252,19 +1223,14 @@ i {
   -ms-transform: scale(1.1);
   -moz-transform: scale(1.1);
 }
-#about .items .item:hover i {
-  /* border-color:#aba26f; */
-  border: 3px solid #aba26f;
-}
-
 
 .read_more_img {
   /* position: a; */
   width: 100%;
   height: auto;
-  padding:4rem;
+  padding: 4rem;
   border-radius: 50%;
-  filter:contrast(80%);
+  filter: contrast(80%);
   /* filter: brightness(.5);
       -webkit-filter: brightness(.8);
       filter: contrast(1.4) saturate(1.8) sepia(.6);
@@ -1540,8 +1506,8 @@ i {
   display: flex;
   /* min-height: 100vh; */
   height: auto;
-  background: #333 url("../img/gallery/kitschen-living\ room-toilet/10.jpg") no-repeat center
-    center/cover;
+  background: #333 url("../img/gallery/kitschen-living\ room-toilet/10.jpg")
+    no-repeat center center/cover;
 }
 
 #who .who-img {
@@ -1585,9 +1551,8 @@ i {
   position: relative;
 }
 
-
 /* ------------------- Reviews -------------------- */
-#reviews .background-title{
+#reviews .background-title {
   display: block;
   text-align: center;
   font-size: 150px;
@@ -1596,8 +1561,6 @@ i {
   color: #2d2d2d;
   position: relative;
   /* padding-top: .1rem; */
-  
-
 }
 
 #reviews .front-title {
@@ -1607,14 +1570,14 @@ i {
 }
 #reviews .wrapper {
   background: #333;
-  padding: .5rem;
+  padding: 0.5rem;
 }
-.reviewsapp{
-  font-family: 'Lato', sans-serif;
-  margin-top:-3rem;
+.reviewsapp {
+  font-family: "Lato", sans-serif;
+  margin-top: -3rem;
 }
 /* --------------- Photo Gallery------------------ */
-#gallery .background-title{
+#gallery .background-title {
   display: block;
   text-align: center;
   font-size: 150px;
@@ -1870,8 +1833,8 @@ i {
 }
 .contact-img {
   position: relative;
-  background: url("../img/gallery/kitschen-living\ room-toilet/10.jpg") no-repeat
-    center center/cover;
+  background: url("../img/gallery/kitschen-living\ room-toilet/10.jpg")
+    no-repeat center center/cover;
   /* -webkit-clip-path: polygon(0 0, 100% 0, 63% 100%, 0% 100%); */
   clip-path: polygon(0 0, 100% 0, 63% 100%, 0% 100%);
 }
@@ -1889,7 +1852,7 @@ i {
   display: block;
   /* z-index: 9; */
 }
-.who-text{
+.who-text {
   padding: 1rem;
 }
 
@@ -2156,7 +2119,6 @@ i {
   );
 }
 
-
 /* Newwwwwwwwwwwwwwwwwwwww */
 
 .heading-secondary {
@@ -2165,12 +2127,11 @@ i {
 
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s;
-
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
 }
 
 .heading-secondary:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
-  text-shadow: .5rem 1rem 2rem rgba(#000, .2);
+  text-shadow: 0.5rem 1rem 2rem rgba(#000, 0.2);
 }
