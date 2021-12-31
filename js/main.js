@@ -1,14 +1,13 @@
-
 // ---------------------------------------------------
 //Page scroll position to top at page refresh
-window.onbeforeunload = function() {
+window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 // ---------------------------------------------------
 // set index of loader to -10 after 10sec
-window.onload = function() {
+window.onload = function () {
   //time is set in milliseconds
-  setTimeout(function() {
+  setTimeout(function () {
     document.querySelector(".loader").style.zIndex = "-10";
     //stop scrolling when loading the page
     document.body.classList.remove("stop-scrolling");
@@ -24,17 +23,17 @@ window.onload = function() {
 // });
 
 //----------------- Book Now Btn animation -------------/
-$(window).ready(function(){
-  $(".boton").wrapInner('<div class=botontext></div>');
-      
-      $(".botontext").clone().appendTo( $(".boton") );
-      
-      $(".boton").append('<span class="twist"></span><span class="twist"></span><span class="twist"></span><span class="twist"></span>');
-      
-      $(".twist").css("width", "25%").css("width", "+=3px");
-  });
+$(window).ready(function () {
+  $(".boton").wrapInner("<div class=botontext></div>");
 
+  $(".botontext").clone().appendTo($(".boton"));
 
+  $(".boton").append(
+    '<span class="twist"></span><span class="twist"></span><span class="twist"></span><span class="twist"></span>'
+  );
+
+  $(".twist").css("width", "25%").css("width", "+=3px");
+});
 
 //--------------- Animation when scrolling ------------/
 
@@ -83,7 +82,7 @@ function checkViewport(elem, flag) {
     if (flag === 3) elem.classList.add("fade-left");
   }
 }
-const isInViewport = function(elem) {
+const isInViewport = function (elem) {
   const bounding = elem.getBoundingClientRect();
   return (
     bounding.top >= 0 &&
@@ -130,7 +129,7 @@ function showplaces() {
   // e.preventDefault();
 }
 // Smooth Scrolling
-$("#navbar a, .boton").on("click", function(event) {
+$("#navbar a, .boton").on("click", function (event) {
   if (this.hash !== "") {
     event.preventDefault();
 
@@ -138,7 +137,7 @@ $("#navbar a, .boton").on("click", function(event) {
 
     $("html, body").animate(
       {
-        scrollTop: $(hash).offset().top - 100
+        scrollTop: $(hash).offset().top - 100,
       },
       800
     );
@@ -164,8 +163,16 @@ function openCity(evt, cityName) {
 }
 
 // Sticky menu background
-window.addEventListener("scroll", function() {
-  if (document.documentElement.scrollTop > 5 || window.scrollY>5 || window.pageYOffset>5) {
+window.addEventListener("scroll", function () {
+  // document.querySelector("#showcase").style.backgroundSize =
+  //   160 - +window.pageYOffset / 12 + "%";
+  document.querySelector("#showcase").style.opacity =
+    1 - +window.pageYOffset / 1000 + "";
+  if (
+    document.documentElement.scrollTop > 5 ||
+    window.scrollY > 5 ||
+    window.pageYOffset > 5
+  ) {
     document.querySelector("#navbar").style.opacity = 0.8;
     $("nav").addClass("blackTrans");
     $("nav ul").removeClass("text-shadow");
@@ -177,4 +184,21 @@ window.addEventListener("scroll", function() {
     $("nav ul").addClass("text-shadow");
     document.getElementById("logo1").style.marginTop = "0rem";
   }
+});
+
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.setAttribute(
+    "style",
+    "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+  );
+});
+
+document.addEventListener("click", () => {
+  cursor.classList.add("expand");
+
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 500);
 });
