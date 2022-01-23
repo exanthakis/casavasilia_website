@@ -202,3 +202,14 @@ document.addEventListener("click", () => {
     cursor.classList.remove("expand");
   }, 500);
 });
+
+// Gsap
+let tl = gsap.timeline({ Defaults: { Easing: Expo.EaseOut } });
+
+tl.from("#showcase", {
+  scale: 0.6,
+  duration: 2,
+  opacity: 0,
+  ease: Expo.easeOut,
+  delay: 0.2,
+});
